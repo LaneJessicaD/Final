@@ -1,3 +1,35 @@
+User:
+  - username: string
+  - password: string
+  - name: string
+
+Dance:
+  - move: string
+  - alias_id: integer
+  - definition: text
+  - picture_url: string
+  - video_url: string
+  - difficulty: integer
+  - genre: string
+  - category: string
+  - page_count: integer
+
+Alias:
+  - other_name: string
+
+
+# Example table for a typical Book model.
+#
+# Book:
+#   - title: string
+#   - price: integer
+#   - author: string
+#   - summary: text
+#   - hardcover: boolean
+#
+# Follow the syntax exactly (colons and spacing are important).
+# Column type choices are: string, text, integer, and boolean.
+# You can have as many models as you want in this file.
 # Example table for a typical Book model.
 #
 # Book:

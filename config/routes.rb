@@ -3,12 +3,11 @@ Final::Application.routes.draw do
   # Specify a custom home page
   get "/" => "dance#index"
 
-
   # Resource: dance
 
   # --- Create
   get "/dance/new" => 'dance#new'
-  post "/dance" => 'directors#create'
+  post "/dance" => 'dance#create'
 
   # --- Read
   get "/dance" => 'dance#index'

@@ -1,0 +1,26 @@
+<% all_dance_moves = Dance.read %>
+
+<h1> The Dance Dictionary: The Ultimate Resource for Dancers </h1>
+
+    <% Dance.read.order("move desc").each do |dance| %>
+          <h2>
+            <%= link_to dance["move"], "/dance/#{dance["id"]}" %>
+          </h2>
+
+          <%= link_to image_tag(dance["picture_url"]), "/dance/#{dance["id"]}" %>
+
+    <% end %>
+
+<p> <%= link_to "Add a New Dance Move", "/dance/new" %> </p>
+
+<ul>
+
+  <% all_dance_moves.each do |dance| %>
+
+    <li>
+      <%= link_to dance["move"], "/dance/#{dance["id"]}" %>
+      (<%= link_to "Delete", "/dance/#{dance["id"]}", "method" => "delete" %>)
+      (<%= link_to "Edit", "/dance/#{dance["id"]}/edit" %>)
+    </li>
+
+  <% end %>

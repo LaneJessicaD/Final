@@ -1,0 +1,11 @@
+<% dance_id = params["id"] %>
+<% dance = Dance.read(dance_id) %>
+<% dance.update "page_count" => (dance["page_count"] + 1) %>
+
+
+    <%= image_tag(dance["picture_url"]) %>
+    <h1><%= dance["move"] %>
+    </h1>
+
+
+

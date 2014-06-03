@@ -1,4 +1,27 @@
 Final::Application.routes.draw do
+
+  # Specify a custom home page
+  get "/" => "dance#index"
+
+
+  # Resource: dance
+
+  # --- Create
+  get "/dance/new" => 'dance#new'
+  post "/dance" => 'directors#create'
+
+  # --- Read
+  get "/dance" => 'dance#index'
+  get "/dance/:id" => 'dance#show'
+
+  # -- Update
+  get "/dance/:id/edit" => 'dance#edit'
+  patch "/dance/:id" => 'dance#update'
+
+  # --- Delete
+  delete "/dance/:id" => 'dance#destroy'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

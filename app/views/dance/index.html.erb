@@ -1,6 +1,5 @@
 <% all_dance_moves = Dance.read %>
 
-<h1> The Dance Dictionary: The Ultimate Resource for Dancers </h1>
     <% Dance.read.order("move desc").each do |dance| %>
           <h2>
             <%= link_to dance["move"], "/dance/#{dance["id"]}" %>

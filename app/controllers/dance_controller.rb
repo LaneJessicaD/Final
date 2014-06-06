@@ -8,9 +8,8 @@ class DanceController < ApplicationController
     redirect_to "/dance"
   end
 
-  # Receive form submitted from /dance/new
   def create
-    Dance.create("move" => params["move_name"], "picture_url" => params["p_url"], "video_url" => params["v_url"], "difficulty" => params["diffi"])
+    Dance.create("move" => params["dance_move"], "picture_url" => params["dance_picture_url"], "video_url" => params["dance_video_url"], "difficulty" => params["dance_difficulty"])
     redirect_to "/dance"
   end
 

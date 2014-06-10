@@ -32,6 +32,9 @@
             <%= link_to "Jazz", "/jazz" %> |
             <%= link_to "Hip-Hop", "/hiphop" %>
           </div>
+          </div>
+
+
           <div class="pull-right">
             <% user = User.find_by("id" => cookies["user_id"]) %>
             <% if user.present? %>

@@ -1,8 +1,41 @@
 <% dance_id = params["id"] %>
 <% dance = Dance.read(dance_id) %>
 
+<div class="row">
 
-    <%= image_tag(dance["picture_url"]) %>
-    <h1><%= dance["move"] %>
-    </h1>
+  <div class="col-md-8">
+    <h1><%= dance["move"] %></h1>
+
+  <div class="col-md-8">
+    <h4><%= dance["genre"] %></h4>
+    <h4>Difficulty: <%= dance["difficulty"] %></h4>
+    <h4><%= dance["definition"] %></h4>
+
+  <img src="<%= dance["picture_url"] %>" alt="Responsive image" class="img-thumbnail">
+
+  </div>
+
+
+<div class="col-md-8">
+
+<br>
+
+<h4>Edit This Dance Move</h4>
+
+    <li>
+      <%= link_to dance["move"], "/dance/#{dance["id"]}" %>
+      (<%= link_to "Delete", "/dance/#{dance["id"]}", "method" => "delete" %>)
+      (<%= link_to "Edit", "/dance/#{dance["id"]}/edit" %>)
+      <br>
+    </li>
+</div>
+
+
+
+
+
+
+
+
+
 

@@ -20,6 +20,9 @@ Final::Application.routes.draw do
   # --- Read
   get "/dance" => 'dance#index'
   get "/dance/:id" => 'dance#show'
+  get "/jazz" => 'dance#jazz'
+  get "/ballet" => 'dance#ballet'
+  get "/hiphop" => "dance#hiphop"
 
   # -- Update
   get "/dance/:id/edit" => 'dance#edit'
